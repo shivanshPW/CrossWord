@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "title": "Web Dev & Pop Culture",
+    "author": "Gemini",
+    "size": {
+      "rows": 10,
+      "cols": 10
+    }
+  },
+  "clues": {
+    "across": [
+      {
+        "number": 1,
+        "clue": "Language for styling web pages",
+        "answer": "CSS",
+        "direction": "across",
+        "row": 0,
+        "col": 0
+      },
+      {
+        "number": 4,
+        "clue": "A popular JavaScript library for UI",
+        "answer": "REACT",
+        "direction": "across",
+        "row": 2,
+        "col": 2
+      },
+      {
+        "number": 6,
+        "clue": "Founder of SpaceX and Tesla",
+        "answer": "ELON",
+        "direction": "across",
+        "row": 4,
+        "col": 0
+      },
+      {
+        "number": 7,
+        "clue": "Most popular video streaming site",
+        "answer": "YOUTUBE",
+        "direction": "across",
+        "row": 6,
+        "col": 3
+      },
+      {
+        "number": 8,
+        "clue": "The 'M' in 'MCU'",
+        "answer": "MARVEL",
+        "direction": "across",
+        "row": 9,
+        "col": 4
+      }
+    ],
+    "down": [
+      {
+        "number": 1,
+        "clue": "Instructions for a computer",
+        "answer": "CODE",
+        "direction": "down",
+        "row": 0,
+        "col": 0
+      },
+      {
+        "number": 2,
+        "clue": "Makes a webpage interactive",
+        "answer": "SCRIPT",
+        "direction": "down",
+        "row": 0,
+        "col": 2
+      },
+      {
+        "number": 3,
+        "clue": "Short video sharing app",
+        "answer": "TIKTOK",
+        "direction": "down",
+        "row": 0,
+        "col": 6
+      },
+      {
+        "number": 5,
+        "clue": "A video game franchise featuring a 'Battle Bus'",
+        "answer": "FORTNITE",
+        "direction": "down",
+        "row": 2,
+        "col": 4
+      }
+    ]
+  }
+}

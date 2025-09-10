@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Crossword Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="game-container">
+        <div class="header">
+            <h1 id="puzzle-title">Loading...</h1>
+            <p id="puzzle-level">Level 1</p>
+        </div>
+        <div class="crossword-container">
+            <div id="crossword-grid"></div>
+        </div>
+        <div class="clues-container">
+            <div class="clue-list-wrapper">
+                <h2>Across</h2>
+                <ol id="across-clues"></ol>
+            </div>
+            <div class="clue-list-wrapper">
+                <h2>Down</h2>
+                <ol id="down-clues"></ol>
+            </div>
+        </div>
+        <div class="controls">
+            <!-- Dedicated input for full words -->
+            <div id="clue-input-container" class="hidden">
+                <p id="clue-input-label">1 Across:</p>
+                <!-- NEW: Wrapper for input and button -->
+                <div class="input-wrapper">
+                    <input type="text" id="clue-input-field" placeholder="Type answer...">
+                    <button id="fill-word-btn">Fill</button>
+                </div>
+            </div>
+            <button id="check-btn">Check Puzzle</button>
+        </div>
+    </main>
+
+    <!-- Success Overlay -->
+    <div id="success-overlay" class="hidden">
+        <div class="success-box">
+            <h2>Level Complete!</h2>
+            <button id="next-level-btn">Next Puzzle</button>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="admin-panel" class="hidden">
+        <h3>Admin Controls</h3>
+        <button id="force-next-btn">Force Next Level</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
