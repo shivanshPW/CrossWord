@@ -42,8 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
             gridElement.innerHTML = '';
             acrossCluesElement.innerHTML = '';
             downCluesElement.innerHTML = '';
-            gridElement.style.gridTemplateRows = 'repeat(' + rows + ', 40px)';
-            gridElement.style.gridTemplateColumns = 'repeat(' + cols + ', 40px)';
+            // Set CSS variables for grid dimensions
+            gridElement.style.setProperty('--grid-rows', rows);
+            gridElement.style.setProperty('--grid-cols', cols);
             populateGridState(clues.across);
             populateGridState(clues.down);
             renderGrid(rows, cols);
@@ -84,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 cell.dataset.row = r;
                 cell.dataset.col = c;
                 
-                // Add coordinate display for dev mode
                 const devCoords = document.createElement('div');
                 devCoords.className = 'dev-coords';
                 devCoords.textContent = `${r},${c}`;
@@ -93,12 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!cellData) {
                     cell.classList.add('empty');
                 } else {
-                    // --- NEW: Add answer display for dev mode ---
                     const devAnswer = document.createElement('div');
                     devAnswer.className = 'dev-answer';
                     devAnswer.textContent = cellData.answer;
                     cell.appendChild(devAnswer);
-                    // --- END NEW FEATURE ---
 
                     if (cellData.clueNumber) {
                         const numDiv = document.createElement('div');
@@ -278,8 +276,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let keySequence = "";
     const adminCode = "~asd";
     const devCode = "~dev";
-    const devAnswersCode = "~adev"; // New code for dev mode with answers
-    const stopDevCode = "~sdev"; // New code to stop all dev modes
+    const devAnswersCode = "~deva";
+    const stopDevCode = "~sdev";
 
     document.addEventListener('keydown', (e) => {
         if (e.target.tagName === 'INPUT') return;
@@ -290,15 +288,13 @@ document.addEventListener('DOMContentLoaded', () => {
             adminPanel.classList.toggle('hidden');
             keySequence = "";
         } else if (keySequence.endsWith(devAnswersCode)) {
-            // Add both classes to show coords and answers
             gameContainer.classList.add('dev-mode', 'dev-answers-mode');
             keySequence = "";
         } else if (keySequence.endsWith(devCode)) {
-            // Just toggle the coordinate view
             gameContainer.classList.toggle('dev-mode');
+            gameContainer.classList.remove('dev-answers-mode');
             keySequence = "";
         } else if (keySequence.endsWith(stopDevCode)) {
-            // Remove both classes to hide all dev info
             gameContainer.classList.remove('dev-mode', 'dev-answers-mode');
             keySequence = "";
         }
