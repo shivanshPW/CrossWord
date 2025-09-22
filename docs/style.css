@@ -119,7 +119,59 @@ li.highlighted { background-color: var(--highlight-color); }
     color: var(--background-color);
 }
 
+/* --- DEV MODE STYLES --- */
+.dev-coords {
+    /* Positioning in the bottom-right corner of a cell */
+    position: absolute;
+    bottom: 2px;
+    right: 3px;
 
+    /* Styling for visibility */
+    font-size: 0.55em;
+    font-weight: bold;
+    color: rgba(255, 82, 82, 0.85); /* A noticeable red color */
+    z-index: 5; /* Puts it above the cell background */
+    
+    /* Hidden by default */
+    display: none;
+}
+
+/* This is the toggle: when .dev-mode is active, show the coordinates */
+.game-container.dev-mode .dev-coords {
+    display: block;
+}
+
+/* Optional: When in dev-mode, ensure the main clue number is clearly visible */
+.game-container.dev-mode .clue-number {
+    background-color: rgba(0,0,0,0.5);
+    padding: 0 2px;
+    border-radius: 2px;
+}
+.cell-input[readonly].correct {
+    /* Keep the green tint to show it's correct */
+    background-color: var(--correct-color); 
+    
+    /* Slightly fade the letter color to indicate it's inactive */
+    color: rgba(224, 224, 224, 0.6); 
+    
+    /* Show a "not-allowed" cursor on hover to show it can't be changed */
+    cursor: not-allowed; 
+}
+.dev-answer {
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgba(100, 255, 100, 0.9); /* Green for answers */
+    z-index: 5;
+    display: none; /* Hidden by default */
+}
+
+/* NEW: Toggle to show the answers */
+.game-container.dev-answers-mode .dev-answer {
+    display: block;
+}
 #check-btn {
     width: 100%;
     max-width: 400px;

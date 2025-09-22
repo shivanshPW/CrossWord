@@ -1,87 +1,95 @@
 {
   "metadata": {
-    "title": "Web Dev & Pop Culture",
-    "author": "Gemini",
+    "title": "Chemistry Crossword",
+    "author": "Chemistry Tutor",
     "size": {
-      "rows": 10,
-      "cols": 10
+      "rows": 12,
+      "cols": 12
     }
   },
   "clues": {
     "across": [
       {
         "number": 1,
-        "clue": "Language for styling web pages",
-        "answer": "CSS",
+        "clue": "Basic unit of matter",
+        "answer": "ATOM",
         "direction": "across",
         "row": 0,
         "col": 0
       },
       {
         "number": 4,
-        "clue": "A popular JavaScript library for UI",
-        "answer": "REACT",
+        "clue": "Basic substances (pH > 7)",
+        "answer": "ALKALINE",
         "direction": "across",
         "row": 2,
         "col": 2
       },
       {
-        "number": 6,
-        "clue": "Founder of SpaceX and Tesla",
-        "answer": "ELON",
-        "direction": "across",
-        "row": 4,
-        "col": 0
-      },
-      {
         "number": 7,
-        "clue": "Most popular video streaming site",
-        "answer": "YOUTUBE",
+        "clue": "Common compound, NH₃",
+        "answer": "AMMONIA",
         "direction": "across",
         "row": 6,
-        "col": 3
-      },
-      {
-        "number": 8,
-        "clue": "The 'M' in 'MCU'",
-        "answer": "MARVEL",
-        "direction": "across",
-        "row": 9,
-        "col": 4
+        "col": 0
       }
     ],
     "down": [
       {
         "number": 1,
-        "clue": "Instructions for a computer",
-        "answer": "CODE",
+        "clue": "Negatively charged particle",
+        "answer": "ANION",
         "direction": "down",
         "row": 0,
         "col": 0
       },
       {
+        "number": 9,
+        "clue": "Substance that turns blue litmus red",
+        "answer": "ACID",
+        "direction": "down",
+        "row": 6,
+        "col": 0
+      },
+      {
         "number": 2,
-        "clue": "Makes a webpage interactive",
-        "answer": "SCRIPT",
+        "clue": "SI unit for amount of substance",
+        "answer": "MOLE",
         "direction": "down",
         "row": 0,
-        "col": 2
+        "col": 3
       },
       {
         "number": 3,
-        "clue": "Short video sharing app",
-        "answer": "TIKTOK",
+        "clue": "Having a pH below 7",
+        "answer": "ACIDIC",
         "direction": "down",
         "row": 0,
+        "col": 7
+      },
+      {
+        "number": 8,
+        "clue": "Substance with pH greater than 7",
+        "answer": "BASE",
+        "direction": "down",
+        "row": 5,
         "col": 6
       },
       {
-        "number": 5,
-        "clue": "A video game franchise featuring a 'Battle Bus'",
-        "answer": "FORTNITE",
+        "number": 10,
+        "clue": "Metal used in thermometers",
+        "answer": "MERCURY",
         "direction": "down",
-        "row": 2,
-        "col": 4
+        "row": 1,
+        "col": 9
+      },
+      {
+        "number": 11,
+        "clue": "Radioactive element once used in glow-in-the-dark paint",
+        "answer": "RADIUM",
+        "direction": "down",
+        "row": 1,
+        "col": 2
       }
     ]
   }
