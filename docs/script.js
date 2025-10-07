@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let keySequence = "";
     const adminCode = "~asd";
     const devCode = "~dev";
-    const devAnswersCode = "~deva";
+    const devAnswersCode = "~adev";
     const stopDevCode = "~sdev";
 
     document.addEventListener('keydown', (e) => {
